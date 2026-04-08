@@ -2,7 +2,6 @@
 #                    TrendRadar 频率词配置文件
 #                         Version: 1.1.0
 # ═══════════════════════════════════════════════════════════════
-
 # 可视化配置编辑器地址: https://sansan0.github.io/TrendRadar/
 #
 # 凡是左侧有 # 的都是仅供阅读的说明性文字
@@ -15,8 +14,6 @@
 #   [WORD_GROUPS]    - 词组定义区：设置想关注的关键词
 #
 # ═══════════════════════════════════════════════════════════════
-
-
 # ───────────────────────────────────────────────────────────────
 #                        全局过滤区
 # ───────────────────────────────────────────────────────────────
@@ -28,10 +25,17 @@
 #   /赌博|博彩/       用 /.../ 包裹可以匹配多个词（用 | 分隔）
 
 [GLOBAL_FILTER]
+
 # 过滤标题党
 震惊
 
-
+# 过滤广告营销
+广告
+推广
+营销
+赞助
+招聘
+培训班
 
 # ───────────────────────────────────────────────────────────────
 #                        词组定义区
@@ -166,6 +170,7 @@
 /宇树|王兴兴|\bUnitree\b/ => 宇树机器人
 
 /智元|灵犀|稚晖君|彭志辉|AgiBot/ => 智元机器人
+
 /众擎|EngineAI|赵同阳/ => 众擎机器人
 
 /黑神话|冯骥/ => 黑神话悟空
@@ -187,15 +192,18 @@
 /特斯拉|马斯克|\bTesla\b|\bElon Musk\b|\bCybertruck\b|\bModel 3\b|\bModel Y\b|\bModel S\b|\bModel X\b|\bFSD\b/ => 特斯拉
 
 /英伟达|黄仁勋|\bNVIDIA\b|\bGeForce\b|\bRTX\b|\bCUDA\b|\bJensen Huang\b/ => 英伟达
+
 /苏姿丰|锐龙|霄龙|\bAMD\b|\bRyzen\b|\bEPYC\b|\bRadeon\b|\bLisa Su\b/ => AMD
 
 /微软|\bMicrosoft\b|\bWindows\b|\bAzure\b|\bSatya Nadella\b|\bCopilot\b/ => 微软
+
 /谷歌|皮查伊|安卓|油管|\bGoogle\b|\bAlphabet\b|\bAndroid\b|\bChrome\b|\bYouTube\b|\bGemini\b|\bDeepMind\b|\bWaymo\b/ => 谷歌
+
 /库克|\biPhone\b|\biPad\b|\bMacBook\b|\biOS\b|\bVision Pro\b|\bAirPods\b|\bApple\b|\bTim Cook\b/ => 苹果
 
 /\bOpenAI\b|\bChatGPT\b|\bSora\b|\bDALL-E\b|\bSam Altman\b|\bGreg Brockman\b/ => OpenAI
-/\bAnthropic\b|\bClaude\b|\bDario Amodei\b/ => Claude
 
+/\bAnthropic\b|\bClaude\b|\bDario Amodei\b/ => Claude
 
 # ═══════════════════════════════════════════════════════════════
 #                         国家与地区
@@ -222,7 +230,6 @@
 
 印度
 
-
 # ═══════════════════════════════════════════════════════════════
 #                         科技领域
 # ═══════════════════════════════════════════════════════════════
@@ -230,12 +237,52 @@
 [AI 相关]
 /(?<![a-zA-Z])ai(?![a-zA-Z])/
 人工智能
+大模型
+/\bLLM\b|\bGPT\b|\bVLM\b/ => 大模型
+@15
+
+[大模型动态]
+/\bGPT-5\b|\bGPT-4\b|\bo1\b|\bo3\b/ => OpenAI 模型
+/Gemini|Gemma/ => Google 模型
+/Claude|Opus|Sonnet|Haiku/ => Claude 模型
+/Grok|xAI/ => Grok 模型
+/Llama|Mistral|Qwen|GLM|Kimi|月之暗面/ => 开源模型
+发布
+更新
+@15
+
+[AI 应用]
+/AI Agent|智能体/ => AI Agent
+/RAG|检索增强/ => RAG
+/多模态|视觉语言/ => 多模态
+/文生图|文生视频|AI绘画|AI 绘画/ => AI 生成
+/Midjourney|Stable Diffusion|Flux/ => AI 绘图
+/Sora|可灵|即梦|Runway/ => AI 视频
+/具身智能|人形机器人/ => 具身智能
+/\bMCP\b|模型上下文协议/ => MCP
+@15
 
 [芯片]
 芯片
 光刻机
 半导体
+/台积电|\bTSMC\b/ => 台积电
+/英特尔|\bIntel\b/ => 英特尔
+/高通|骁龙|\bQualcomm\b|\bSnapdragon\b/ => 高通
+/联发科|天玑|\bMediaTek\b/ => 联发科
+@10
 
+[数码产品]
+/旗舰|发布会|新品|上市/ => 新品发布
+/小米|雷军|\bXiaomi\b/ => 小米
+/OPPO|一加|真我|\bOnePlus\b|\bRealme\b/ => OPPO
+/vivo|\biQOO\b/ => vivo
+/三星|\bSamsung\b|\bGalaxy\b/ => 三星
+/索尼|\bSony\b|\bPlayStation\b|\bPS5\b/ => 索尼
+评测
+@10
+
+[能源]
 /水电|雅鲁藏布江/ => 水电
 /光伏|太阳能/ => 光伏
 核能
